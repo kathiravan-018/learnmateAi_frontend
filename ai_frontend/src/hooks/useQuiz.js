@@ -26,7 +26,7 @@ export default function useQuiz() {
             );
 
             const response = await fetch(
-                "http://127.0.0.1:8000/api/quiz/",
+                "://127.0.0.1:8000/api/quiz/",
                 {
                     method: "POST",
 

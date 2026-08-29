@@ -27,7 +27,7 @@ export default function Navbar() {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:8000/api/me/",
+                "https://learnmateai-backend.onrender/api/me/",
                 {
                     method: "GET",
 

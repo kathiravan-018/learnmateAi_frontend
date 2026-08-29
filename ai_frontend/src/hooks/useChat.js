@@ -28,7 +28,7 @@ const sendMessage = async (message) => {
         console.log("🚀 Sending request:", message);
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/chat/",
+            "https://learnmateai-backend.onrender/api/chat/",
             {
                 method: "POST",
 
