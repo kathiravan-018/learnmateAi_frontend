@@ -28,7 +28,7 @@ const sendMessage = async (message) => {
         console.log("🚀 Sending request:", message);
 
         const response = await fetch(
-            "https://learnmateai-backend.onrender/api/chat/",
+            "https://learnmateai-backend.onrender.com/api/chat/",
             {
                 method: "POST",
 

@@ -20,7 +20,7 @@ export default function useNotes() {
         try {
 
     const response = await fetch(
-        "https://learnmateai-backend.onrender/api/notes/",
+        "https://learnmateai-backend.onrender.com/api/notes/",
         {
             method: "POST",
 

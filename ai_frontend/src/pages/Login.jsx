@@ -44,7 +44,7 @@ export default function Login() {
         try {
 
             const response = await fetch(
-                "https://learnmateai-backend.onrender/api/auth/login/",
+                "https://learnmateai-backend.onrender.com/api/auth/login/",
                 {
                     method: "POST",
 

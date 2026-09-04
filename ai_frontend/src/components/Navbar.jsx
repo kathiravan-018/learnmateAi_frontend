@@ -27,7 +27,7 @@ export default function Navbar() {
         try {
 
             const response = await fetch(
-                "https://learnmateai-backend.onrender/api/me/",
+                "https://learnmateai-backend.onrender.com/api/me/",
                 {
                     method: "GET",
 
@@ -194,7 +194,17 @@ export default function Navbar() {
 
                 {/* Logo */}
                <div className="flex">
-                
+
+               <img
+                src={ailogo}
+                alt="LearnMate AI logo"
+                className="
+                    h-13
+                    w-13
+                    object-contain
+                "
+            />
+
 
                 <h2
                     className="

@@ -23,7 +23,7 @@ const CodeExplainer = () => {
 
     try {
       const response = await axios.post(
-        "https://learnmateai-backend.onrender/api/code-explain/",
+        "https://learnmateai-backend.onrender.com/api/code-explain/",
         {
           code: code,
         }
