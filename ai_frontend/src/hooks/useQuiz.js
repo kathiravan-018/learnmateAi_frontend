@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+const API_URL =
+    import.meta.env.VITE_API_URL ||
+    "http://127.0.0.1:8000/api";
+
 export default function useQuiz() {
 
     const [quiz, setQuiz] = useState(null);
@@ -25,8 +29,13 @@ export default function useQuiz() {
                 previousQuestions
             );
 
+            console.log(
+                "Quiz API URL:",
+                `${API_URL}/quiz/`
+            );
+
             const response = await fetch(
-                "://127.0.0.1:8000/api/quiz/",
+                `${API_URL}/quiz/`,
                 {
                     method: "POST",
 
@@ -41,11 +50,14 @@ export default function useQuiz() {
                 }
             );
 
-            if (!response.ok) {
-                throw new Error("Quiz request failed");
-            }
-
             const data = await response.json();
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.error || "Quiz request failed"
+                );
+            }
 
             setQuiz(data.quiz);
 
@@ -57,9 +69,13 @@ export default function useQuiz() {
 
         } catch (error) {
 
-            console.error(error);
+            console.error(
+                "❌ Quiz Error:",
+                error
+            );
 
             setError(
+                error.message ||
                 "Unable to generate quiz. Please try again."
             );
 
