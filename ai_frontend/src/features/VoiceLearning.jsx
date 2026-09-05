@@ -181,18 +181,17 @@ export default function VoiceLearning() {
     // =========================================
 
     useEffect(() => {
+    if (!response) {
+        return;
+    }
 
-        if (!response) {
-            return;
-        }
+    const cleanText = cleanTextForSpeech(response);
 
-        const cleanText = cleanTextForSpeech(response);
-
-        if (cleanText) {
-            speak(cleanText);
-        }
-
-    }, [response, speak]);
+    if (cleanText) {
+        console.log("🔊 Sending response to speech...");
+        speak(cleanText);
+    }
+}, [response, speak]);
 
 
     // =========================================
