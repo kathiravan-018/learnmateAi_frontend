@@ -45,7 +45,7 @@ export default function SignUp() {
         try {
 
             const response = await fetch(
-                "https://learnmateai-backend..com/api/auth/register/",
+                "https://learnmateai-backend.com/api/auth/register/",
                 {
                     method: "POST",
 
