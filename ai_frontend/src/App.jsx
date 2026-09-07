@@ -9,13 +9,12 @@ import QuizGenerator from "./features/QuizGenerator";
 import CodeExplainer from "./features/CodeExplainer";
 import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
 
-import { Toaster } from 'sonner';
+import { Toaster } from "sonner";
 
 export default function App() {
-
     return (
-
         <div className="
             min-h-screen
             bg-gradient-to-br
@@ -24,60 +23,73 @@ export default function App() {
             to-violet-100
         ">
 
-             <Toaster
+            <Toaster
                 position="top-right"
                 richColors
-                
             />
-
-           
 
             <Routes>
 
+                {/* Public Home */}
                 <Route
                     path="/"
                     element={
                         <>
-                             <Navbar />
+                            <Navbar />
                             <Hero />
                         </>
                     }
                 />
 
-                <Route path='/features'
-                 element={
-                     <>
-                             <Navbar />
-                           <FeatureSection/>
-                     </> }
-                        />
+                {/* Public Features Page */}
+                <Route
+                    path="/features"
+                    element={
+                        <>
+                            <Navbar />
+                            <FeatureSection />
+                        </>
+                    }
+                />
 
-                <Route 
-                path="/features/voice"
-                element={<VoiceLearning/>}
+                {/* Protected Learning Features */}
+                <Route element={<ProtectedRoute />}>
+
+                    <Route
+                        path="/features/voice"
+                        element={<VoiceLearning />}
+                    />
+
+                    <Route
+                        path="/features/notes"
+                        element={<NotesGenerator />}
+                    />
+
+                    <Route
+                        path="/features/quiz"
+                        element={<QuizGenerator />}
+                    />
+
+                    <Route
+                        path="/features/code"
+                        element={<CodeExplainer />}
+                    />
+
+                </Route>
+
+                {/* Authentication */}
+                <Route
+                    path="/signup"
+                    element={<SignUp />}
                 />
 
                 <Route
-                    path="/features/notes"
-                    element={<NotesGenerator />}
+                    path="/login"
+                    element={<Login />}
                 />
 
-                <Route 
-                    path="/features/quiz"
-                    element={<QuizGenerator/>}
-                    />
-
-                <Route path="/features/code" element={<CodeExplainer />} />
-
-                <Route path='/signup' element={<SignUp/>} />
-
-                <Route path='/login' element={<Login/>} />
-
-                
             </Routes>
 
         </div>
-
     );
-
 }
