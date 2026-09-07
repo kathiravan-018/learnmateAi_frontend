@@ -423,28 +423,199 @@ export default function Hero() {
             </div>
 
 
-            {/* =========================================
-                Bottom Message
-            ========================================= */}
+           {/* =========================================
+    About LearnMate AI
+========================================= */}
+
+<div className="
+    relative
+    z-10
+    mt-20
+    w-full
+    max-w-5xl
+">
+
+    <div className="
+        rounded-3xl
+        border
+        border-violet-100
+        bg-white
+        p-8
+        text-left
+        shadow-lg
+        md:p-12
+    ">
+
+        {/* Section Label */}
+
+        <p className="
+            text-xs
+            font-bold
+            uppercase
+            tracking-[0.2em]
+            text-violet-600
+        ">
+            ABOUT LEARNMATE AI
+        </p>
+
+
+        {/* Heading */}
+
+        <h2 className="
+            mt-3
+            text-3xl
+            font-extrabold
+            text-gray-900
+            md:text-4xl
+        ">
+            Your personal AI learning companion
+        </h2>
+
+
+        {/* Description */}
+
+        <p className="
+            mt-5
+            max-w-3xl
+            text-base
+            leading-8
+            text-gray-600
+            md:text-lg
+        ">
+            LearnMate AI is an intelligent learning assistant designed to
+            make studying simpler, faster, and more interactive. Instead of
+            searching through multiple resources, you can ask questions,
+            understand difficult concepts, generate study notes, create
+            quizzes, and get programming help in one place.
+        </p>
+
+
+        <p className="
+            mt-4
+            max-w-3xl
+            text-base
+            leading-8
+            text-gray-600
+            md:text-lg
+        ">
+            Powered by AI, LearnMate AI helps you learn at your own pace
+            through natural conversations and practical learning tools.
+            Whether you are revising a topic, preparing for an exam, or
+            trying to understand a piece of code, your AI assistant is
+            always ready to help.
+        </p>
+
+
+        {/* Highlight Cards */}
+
+        <div className="
+            mt-8
+            grid
+            grid-cols-1
+            gap-4
+            sm:grid-cols-3
+        ">
 
             <div className="
-                relative
-                z-10
-                mt-14
-                rounded-full
-                border
-                border-gray-200
-                bg-white/80
-                px-5
-                py-2.5
-                text-sm
-                font-medium
-                text-gray-500
+                rounded-2xl
+                bg-violet-50
+                p-5
             ">
+                <h3 className="
+                    font-bold
+                    text-gray-900
+                ">
+                    🎙️ Learn by Voice
+                </h3>
 
-                ✨ Learn at your own pace with LearnMate AI.
-
+                <p className="
+                    mt-2
+                    text-sm
+                    leading-6
+                    text-gray-600
+                ">
+                    Ask questions naturally and interact with your AI
+                    learning assistant.
+                </p>
             </div>
+
+
+            <div className="
+                rounded-2xl
+                bg-cyan-50
+                p-5
+            ">
+                <h3 className="
+                    font-bold
+                    text-gray-900
+                ">
+                    📝 Study Smarter
+                </h3>
+
+                <p className="
+                    mt-2
+                    text-sm
+                    leading-6
+                    text-gray-600
+                ">
+                    Turn topics into structured notes and interactive
+                    quizzes for better revision.
+                </p>
+            </div>
+
+
+            <div className="
+                rounded-2xl
+                bg-emerald-50
+                p-5
+            ">
+                <h3 className="
+                    font-bold
+                    text-gray-900
+                ">
+                    💻 Understand Code
+                </h3>
+
+                <p className="
+                    mt-2
+                    text-sm
+                    leading-6
+                    text-gray-600
+                ">
+                    Get simple explanations that make programming concepts
+                    and code easier to understand.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{/* =========================================
+    Bottom Message
+========================================= */}
+
+<div className="
+    relative
+    z-10
+    mt-10
+    rounded-full
+    border
+    border-gray-200
+    bg-white/80
+    px-5
+    py-2.5
+    text-sm
+    font-medium
+    text-gray-500
+">
+
+    ✨ Learn at your own pace with LearnMate AI.
+
+</div>
 
         </section>
     );
